@@ -31,6 +31,7 @@ var ukrcities = ["Cherkasy", "Chernihiv", "Kiev", "Vinnytsia", "Zhytomyr", "Rivn
 ukrcities.forEach(function (item, index, array) {
   console.log(item, index);
 });
+
 // filter
 function prices(amount) {
   return amount >= 10 && amount <= 10000;
