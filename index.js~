@@ -16,10 +16,10 @@ console.log(centralwestUkraine);
 // indexOf
 var cherkasyoblast = ["Kiev", "Kharkiv", "Dnipro", "Odessa", "Lviv"];
 
-var obl = "Kiev is at position" + cherkasyoblast.indexOf("Kiev");
-  obl += "Lviv is at position" + cherkasyoblast.indexOf("Lviv");
-  obl += "Rivne is at position" + cherkasyoblast.indexOf("Rivne");
-console.log(obl);
+var km = "Kiev is at position" + cherkasyoblast.indexOf("Kiev");
+  km += "Lviv is at position" + cherkasyoblast.indexOf("Lviv");
+  km += "Rivne is at position" + cherkasyoblast.indexOf("Rivne");
+console.log(km);
 
 // join
 var ukraine = ["Cherkasy", "Chernihiv", "Kiev", "Vinnytsia", "Zhytomyr", "Rivne", "Lviv", "Ternopil", "Volyn"];
