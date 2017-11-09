@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.tamagothchi{
+  /*top: 0px;
+  left: -400px;
+  margin-left: 400px;*/
+  width: 800px;
+  background-color: rgba(0,0,0,0.4);
+}
+.br-i{
+  line-height: 25px;
+}
+/*.biography-left{
+  top: 573px;
+  left:3%;
+  width: 45%;
+  position: absolute;
+  height: 500px;
+  overflow: hidden;
+}*/

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Tamagotchi</title>
+      <link href="style.css" rel="stylesheet" type="text/css">
+      <script src="tamagotchi.js"></script>
+  </head>
+  <body>
+    <div class="tamagothchi">
+      <div class="main">
+        <header>Name: <i id="name"></i></header><br class="br-i"/>
+        <main>
+          <b> Happines:</b> <i id="happinessLevel"></i><br class="br-i"/>
+          <b> Satiety:</b> <i id="foodLevel"></i><br class="br-i"/>
+          <b> Power:</b> <i id="powerLevel"></i><br class="br-i"/>
+          <b> Energy:</b> <i id="energyLevel"></i><br class="br-i"/>
+          <b> Health:</b> <i id="healthLevel"></i><br class="br-i"/>
+          <b>Стан <i id="name"></i> :</b><i id="status"></i>
+        </main>
+      </div>
+      <nav class="nav">
+        <input type="button" onclick="pet.eat()" value="Кормити">
+        <input type="button" onclick="pet.play()" value="Гратися">
+        <input type="button" onclick="pet.swim()" value="Купати">
+        <input type="button" onclick="pet.sleep()" value="Спати">
+        <input type="button" onclick="pet.treat()" value="Лікувати">
+        <input type="button" onclick="pet.play_mean_tricks()" value="Пакостити">
+      </nav>
+
+    </div>
+
+  </body>
+</html>
