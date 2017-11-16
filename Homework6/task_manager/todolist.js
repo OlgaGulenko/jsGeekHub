@@ -6,8 +6,8 @@ var options = {
   hour: 'numeric',
   minute: 'numeric',
 };
-var todoList = JSON.parse(localStorage.getItem('items'));
-todoList = [];
+var todoList = JSON.parse(localStorage.getItem('items') || '[]');
+// todoList = [];
 var input = document.getElementById('input');
 var list = document.getElementById('list');
 
@@ -67,6 +67,10 @@ function List() {
         };
       };
     })
+}
+
+function render(items){
+  //the code will be here
 }
 
 function addTask() {
