@@ -73,7 +73,7 @@ Tamagotchi.prototype.live = function() {
          that.powerLevel--;
          that.healthLevel--;
 
-		 if(that.energy < 0) clearInterval(leaveTimer);
+		 if(that.energyLevel < 0 || that.foodLevel < 0 || that.healthLevel < 0) clearInterval(leaveTimer);
 
 
   }, 3000);
@@ -81,33 +81,35 @@ Tamagotchi.prototype.live = function() {
 
 Tamagotchi.prototype.currentStatus = function() {
 
-  if (this.happinessLevel < 40 || this.foodLevel < 50 || this.powerLevel < 30 || this.energyLevel < 30 || this.healthLevel < 60){
+  if (this.happinessLevel < 40 || this.foodLevel < 30 || this.powerLevel < 30 || this.energyLevel < 30 || this.healthLevel < 60){
     this.status = 'I badly feel!';
   } else{
     this.status = 'I am very good!';
-    	elem.getElementById('status').textContent = "I'm very good!";
+    	this.status = "I'm very good!";
   }
   if (this.happinessLevel < 50){
-      elem.getElementById('status').textContent = "I feel sad. I want to play mean tricks or play or swim and sleep";
+      this.status = "I feel sad. I want to play mean tricks or play or swim and sleep";
   }
   if (this.foodLevel < 50) {
-    elem.getElementById('status').textContent = "I'm hungry";
-  } elem.getElementById('status').textContent = "I'm full";
+    this.status = "I'm hungry";
+  }
 
   if (this.powerLevel < 50){
-    elem.getElementById('status').textContent = "I'm so tired. I want to sleep and eat";
+    this.status = "I'm so tired. I want to sleep and eat";
   }
   if (this.energyLevel < 50) {
-    elem.getElementById('status').textContent = "I'm so tired";
+    this.status = "I'm so tired";
   }
   if (this.healthLevel  < 50) {
-    elem.getElementById('status').textContent = "I'm ill";
+    this.status = "I'm ill";
   }
   if (this.happinessLevel < 20 || this.foodLevel < 30 || this.powerLevel < 20 || this.energyLevel < 20 || this.healthLevel < 30){
     this.status = 'I die!';
   }
   if(this.foodLevel <= 0 && this.healthLevel <= 0 || this.foodLevel <= 0 && this.energyLevel <= 0 && this.powerLevel <= 0)
     elem.getElementById('status').textContent = "Загиблик died!";
+
+  elem.getElementById('status').textContent = this.status;
 
 };
 
