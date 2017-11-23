@@ -38,7 +38,7 @@ function taskList() {
         var box = document.createElement('input');
         box.setAttribute('type', 'checkbox');
         box.setAttribute('class', 'checkBox');
-        h1.appendChild(box);
+        div.appendChild(box);
         // console.log(list);
         box.onclick = function () {
             if(box.checked){
