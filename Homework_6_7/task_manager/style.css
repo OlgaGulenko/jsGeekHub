@@ -50,19 +50,18 @@ position:
 .small{
 width: 150px;
 }
-
-
-
-
-
+.checkBox{
+    float: right;
+    height: 25px;
+    width: 25px;
+    margin-top: -20px;
+}
 .inputBlock {
     width: 800px;
     position: relative;
     flex-direction: column;
     margin: auto;
 }
-
-
 .item{
     display: block;
     width: 500px;
