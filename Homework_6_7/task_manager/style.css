@@ -91,3 +91,7 @@ button:hover, input[type = button]:hover { background: rgba(0,0,0,0.5); }
 .task h1{
   width: 90%;
 }
+
+.dapperblock {
+    background-color: rgba(65, 0, 119, 0.5);
+}

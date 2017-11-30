@@ -17,14 +17,19 @@ function taskList() {
     todoList.forEach(function (element, i) {
         var div = document.createElement('div');
         var h1 = document.createElement('h1');
-        var deleteBtn = document.createElement('button');//1
-        var editBtn = document.createElement('button');//2
-        var date = document.createElement('date');
+        var deleteBtn = document.createElement('button');
+        var editBtn = document.createElement('button');
+        var b = document.createElement('b');
+
         div.setAttribute('id', i);
         div.setAttribute('done', element.done);
+
+        div.setAttribute('draggable', 'true');//qwe
+        saveDraggable(div);//qwe
+
         h1.setAttribute('id', 'taskname');
         h1.setAttribute('class', 'taskname');
-        date.innerText = element.date;
+        b.innerText = element.date;
         h1.innerText = element.text;
         div.append(h1);
         editBtn.innerText = 'Edit';
@@ -33,7 +38,7 @@ function taskList() {
         h1.setAttribute('data', 'drag-helper');
         div.append(editBtn);
         div.append(deleteBtn);
-        div.append(date);
+        div.append(b);
         list.append(div);
         var box = document.createElement('input');
         box.setAttribute('type', 'checkbox');
@@ -86,7 +91,40 @@ function taskList() {
     })
 }
 
+function runDraggable(event) {
+    drag = event.target;
+    element = this;
+    event.dataTransfer.effectAllowed = "move";
+    event.currentTarget.classList.add('dapperblock');
+    event.dataTransfer.setData('text/html', this.innerHTML);
+}
+function shiftBlock(e) {
+    e.preventDefault();
+    element.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData('text/html');
+    todoList = [];
+    var list = document.querySelectorAll('.task');
+    list.forEach(function (element) {
+        var todo = {
+            text: element.firstChild.textContent,
+            date: element.lastChild.textContent,
+        };
+        todo.done = element.children[element.children.length - 2].innerText !== 'false';
+        todoList.push(todo);
+    });
+    localStorage.setItem('items', JSON.stringify(todoList));
+    window.location.reload();
+}
 
+function saveDraggable(element) {
+    element.addEventListener('dragstart', runDraggable, false);
+    element.addEventListener('dragenter', function (e) {
+        e.preventDefault();
+        e.currentTarget.classList.remove('dapperblock');
+        }, false);
+    element.addEventListener('dragover', function (e) { e.preventDefault()}, false);
+    element.addEventListener('drop', shiftBlock, false);
+}
 function render(items){
   //the code will be here
 }
