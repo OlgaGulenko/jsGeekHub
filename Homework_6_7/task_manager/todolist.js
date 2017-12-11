@@ -107,7 +107,7 @@ function shiftBlock(e) {
     list.forEach(function (element) {
         var todo = {
             text: element.firstChild.textContent,
-            date: element.lastChild.textContent,
+            date: element.children[3].textContent
         };
         todo.done = element.children[element.children.length - 2].innerText !== 'false';
         todoList.push(todo);

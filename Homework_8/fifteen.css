@@ -1,0 +1,74 @@
+body, button {
+	background-color: rgba(0,0,0,0);
+	font-family: 'Work Sans', sans-serif;
+	/*font-family: cursive;*/
+	font-size: 14pt;
+	text-align: center;
+}
+
+/* The area that holds the 15 puzzle pieces. */
+#puzzlearea {
+	font-size: 40pt;
+	width: 400px;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+/* This class should be applied to each of the 15 puzzle pieces. */
+.puzzlepiece {
+	border: 2px solid rgba(0,0,0,1);
+	width: 90px;
+	height: 90px;
+	position: absolute;
+}
+
+/* This class should be applied to a puzzle piece that can be moved. */
+.movablepiece:hover {
+	border-color: rgb(135, 0, 94);
+	color: rgb(0, 99, 16);
+}
+
+#throbber {
+	visibility: hidden;
+	height: 30px;
+	width: 30px;
+	vertical-align: middle;
+}
+
+
+
+/* grading styles -- for TAs only; not required by students */
+#gradingarea {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	z-index: 999999;
+}
+
+.valid {
+	background-color: #bfb;
+}
+
+.invalid {
+	background-color: #f88;
+}
+
+.records {
+	width: 100%;
+	position: absolute;
+	list-style-type: none;
+}
+.controls{
+	/*background-color: rgba(0, 0, 0, 0.5);*/
+}
+.shufflebutton{
+	border-radius: 2px;
+	width: 200px;
+	height: 40px;
+}
+.shufflebutton:hover{
+	background-color: rgba(0,0,0,0.1);
+
+}
