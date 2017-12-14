@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fifteen Puzzle</title>
+		<meta charset="utf-8">
+		 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+		 <link href="fifteen.css" type="text/css" rel="stylesheet" />
+		<script src="fifteen.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<h1>:</h1>
+
+		<p id="controls" class = "controls">
+			<button id="shufflebutton" class = "shufflebutton">Shuffle</button>
+		</p>
+	</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>google maps</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="requests.js" defer></script>
+</head>
+<body>
+
+	<div class="container">
+		<label for="search"></label>
+		<input type="text" id="search" class="search" placeholder="Write the address here">
+		<button id="button" class="button">Search</button>
+
+		<h2 id="h2">address will be here</h2>
+		<b class="coordinates" id="lat"></b>
+		<b class="coordinates" id="lng"></b>
+
+		<div class="map" id="map"></div>
+
+	</div>
+
+
+	<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGK-_eLKmQcU-s_XmCS2UYRANVqk2fQ-Q&callback=initMap">
+	</script>
+
+</body>
+</html>
