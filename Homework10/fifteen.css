@@ -1,3 +1,6 @@
+body{
+ font-family: 'Work Sans', sans-serif;
+}
 .container {
     display: block;
     border: 1px solid black;
@@ -40,7 +43,7 @@ div > div {
     height: 90px;
     margin: 5px;
     text-align: center;
-    font: 20px/90px Tahoma,sans;
+    font-size: 30px;
     background-color: rgba(119, 0, 97, 1);
 }
 
@@ -79,8 +82,7 @@ input {
     width: 200px;
     padding: 13.5px 20px;
     margin: 8px 0;
-    box-sizing: border-box;
-    border: 3px solid #ccc;
+    border: 1px solid rgba(0,0,0,0.8);
     transition: 0.5s;
     outline: none;
 }
